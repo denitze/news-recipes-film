@@ -1,3 +1,5 @@
+/* Denise Part */
+
 * {
     padding: 0;
     margin:0;
@@ -74,4 +76,109 @@ body {
 
 .recipe a {
     color:black;
+}
+/*
+Finns style
+*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: sans-serif;
+    color: #333;
+    background: #D9DBDF;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+ul li:nth-of-type(1) {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: .7;
+} 
+
+header {
+    height: 70vh;
+    background: url(../img/headerimg.png) top / contain no-repeat;
+    animation: spinning 50s linear infinite;
+    margin: 0 0 2rem 0;
+}
+
+#newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 6vmin;
+    
+}
+
+#logo {
+    border-radius: 0;
+    height: 2.5rem;
+}
+
+#logo:hover {
+    opacity: .8;
+}
+
+img {
+    max-height: 25vh;
+    object-fit: cover;
+    margin: 0 0 1rem 0;
+    border-radius: 2rem;
+}
+
+img:hover {
+    opacity: .8;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border-radius: 2rem;
+    box-shadow:  10px 10px 25px #b8babe, 
+             -10px -10px 25px #fafcff;
+
+}
+
+figcaption {
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+}
+
+figure p a {
+    font-weight: bold;
+}
+
+.description {
+    margin: 0 0 3rem 0;
+}
+
+@keyframes spinning {
+   0% {
+       transform: rotate(0);
+   }
+   100% {
+    transform: rotate(360deg);
+   }
 }
