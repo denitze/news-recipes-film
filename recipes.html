@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <nav>
 
+        <img src="assets/img/nrf_logo-02.svg" id="logo" alt="">
+        <ul>
+            <li><a href="index.html">News</a></li>
+            <li><a href="recipes.html">Rezepte</a></li>
+            <li><a href="film.html">Filme</a></li>
+        </ul>
+    </nav>
+    <header id="food-header">
+        <h1>What food are you craving for? <br> Enter an ingredient and we show you the matching recipe!</h1>
+        <section id="enter-recipe">
+            <input type="text" name="" id="ingredient" placeholder="enter an ingredient">
+            <button onclick="findRecipe()">Search for recipes!</button>
+        </section>
+    </header>
    
-    <section id="enter-recipe">
-        <input type="text" name="" id="ingredient" placeholder="enter an ingredient">
-        <button onclick="findRecipe()">Search for recipes!</button>
-    </section>
+
     <div id="food-result">
         <div class="recipe">
             <img src="https://picsum.photos/800/600" alt="">

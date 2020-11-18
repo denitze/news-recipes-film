@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+// Denise JS
+
 const foodResult = document.getElementById("food-result")
 let ingredient = document.getElementById("ingredient")
 
@@ -46,7 +47,6 @@ let ingredient = document.getElementById("ingredient")
         }
     })
     }
-=======
 // Finns JS
 const newsGrid = document.getElementById("newsGrid")
 
@@ -77,4 +77,3 @@ fetch('http://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=0
 
         })
   } )
->>>>>>> e401968ab8f3e12b255839981b3aa8fb41e47ac0
