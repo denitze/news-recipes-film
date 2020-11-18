@@ -7,6 +7,58 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+   
+    <section id="enter-recipe">
+        <input type="text" name="" id="ingredient" placeholder="enter an ingredient">
+        <button onclick="findRecipe()">Search for recipes!</button>
+    </section>
+    <div id="food-result">
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon"> 
+            <p>- Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon">
+            <p>Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon">
+            <p>- Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon">
+            <p>- Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon"> 
+            <p>- Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+        <div class="recipe">
+            <img src="https://picsum.photos/800/600" alt="">
+            <h2>${json.title}</h2>
+            <img src="assets/img/cooking-time.png" alt="" class="icon">
+            <p>- Ready in ${json.readyInMinutes}</p>
+            <button><a href="${json.sourceUrl}">See Recipe</a></button>
+        </div>
+    </div>
+ 
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
