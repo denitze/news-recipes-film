@@ -12,10 +12,12 @@ const ingredient = document.getElementById("ingredient")
 
     function findRecipe() {
         console.log(ingredient);
-        let search = ingredient.value
+        let search = ingredient.value;
+        foodResult.innerHTML = ""
         // ingredient = ingredient.value;
         console.log(ingredient);
-        fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=df611f75b97141be917063ad735d8e66&number=2&ingredients=${search}`)
+        // fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=dc19a07e2b204a24857d8eff71c69d5b&number=10&ingredients=${search}`)
+        fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=df611f75b97141be917063ad735d8e66&number=10&ingredients=${search}`)
         .then(response => response.json())
         .then(json => {
         if(search = json.length < 1) {
@@ -27,6 +29,7 @@ const ingredient = document.getElementById("ingredient")
             console.log(json)
             let recipeId = json[i].id;
 
+            // fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=dc19a07e2b204a24857d8eff71c69d5b`)
             fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=df611f75b97141be917063ad735d8e66`)
             .then(response => response.json())
             .then(json => { 
