@@ -106,3 +106,211 @@ nav img{
     height: 70%;
     padding-left: 20%;
 } */
+/* Denise Part */
+
+* {
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    }
+
+
+body {
+    background: #D9DBDF;
+}
+
+
+#food-header {
+    height: 70vh;
+    background-image: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 0 2rem 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#food-header h1 {
+    text-align: center;
+    margin: 3vh auto;
+}
+
+#enter-recipe {
+    text-align: center;
+   
+}
+
+
+
+#enter-recipe button {
+    padding:1.8rem 5rem;
+    border-radius: 5px;
+    border:1px solid grey;
+    background: #FAD78D;
+    font-size: 1rem;
+}
+
+#enter-recipe input {
+    padding: 2rem 10rem 2rem 1rem;
+    margin-right:3rem;
+    border-radius: 10px;
+    border:none;
+    font-size: 1.5rem;
+ 
+}
+
+#food-result {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.recipe {
+    width:80%;
+    /* border: 3px solid grey; */
+    /* background: rgb(230, 211, 211); */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 5vh auto;
+    padding:1rem;
+    box-shadow:  10px 10px 25px #b8babe, 
+             -10px -10px 25px #fafcff;
+
+}
+
+.recipe img {
+    width:100%;
+    border-radius: 18px;
+    margin-bottom:2vh;
+}
+
+.recipe .icon{
+    width:20px;
+    border-radius: 18px;
+    margin:0;
+}
+
+.recipe h2 {
+    margin:2vh auto;
+}
+
+.recipe p {
+    margin:2vh auto;
+
+}
+
+#food-result .recipe button {
+    padding:.5rem 2rem;
+    border-radius: 5px;
+    border:1px solid grey;
+    background: #FAD78D;
+}
+
+.recipe a {
+    color:black;
+}
+/*
+Finns style
+*/
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+ul li:nth-of-type(1) {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: .7;
+} 
+
+#news-header {
+    height: 70vh;
+    background: url(../img/headerimg.png) top / contain no-repeat;
+    animation: spinning 50s linear infinite;
+    margin: 0 0 2rem 0;
+}
+
+#newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 6vmin;
+    
+}
+
+#logo {
+    border-radius: 0;
+    height: 2.5rem;
+}
+
+#logo:hover {
+    opacity: .8;
+}
+
+img {
+    max-height: 25vh;
+    object-fit: cover;
+    margin: 0 0 1rem 0;
+    border-radius: 2rem;
+}
+
+img:hover {
+    opacity: .8;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border-radius: 2rem;
+    box-shadow:  10px 10px 25px #b8babe, 
+             -10px -10px 25px #fafcff;
+
+}
+
+figcaption {
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+}
+
+figure p a {
+    font-weight: bold;
+}
+
+.description {
+    margin: 0 0 3rem 0;
+}
+
+@keyframes spinning {
+   0% {
+       transform: rotate(0);
+   }
+   100% {
+    transform: rotate(360deg);
+   }
+}
