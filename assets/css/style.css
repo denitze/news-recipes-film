@@ -11,7 +11,6 @@ NEWS - Finns style
     box-sizing: border-box;
     }
 
-
     body {
         background: #D9DBDF;
     }
@@ -85,7 +84,6 @@ figure {
     border-radius: 2rem;
     box-shadow:  10px 10px 25px #b8babe, 
              -10px -10px 25px #fafcff;
-
 }
 
 figcaption {

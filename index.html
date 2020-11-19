@@ -8,7 +8,6 @@
 </head>
 <body>
     <nav>
-
         <img src="assets/img/nrf_logo-02.svg" id="logo" alt="">
         <ul>
             <li><a href="index.html">News</a></li>
@@ -19,7 +18,16 @@
     <header id="news-header">
     </header>
     <main>
-        <section id="newsGrid"></section>
+        <select name="categories" id="categories">
+            <option value="General">General</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Gesundheit</option>
+            <option value="science">Wissenschaft</option>
+          </select>
+        <section id="newsGrid">
+            <figure id="weather"></figure>
+        </section>
     </main>
     <footer>
         <ul>
@@ -31,7 +39,7 @@
         </ul>
     </footer>
 
-
+    
 
     <script src="assets/js/main.js"></script>
 </body>

@@ -54,19 +54,62 @@ const ingredient = document.getElementById("ingredient")
 
 // Finns JS
 const newsGrid = document.getElementById("newsGrid")
+let weatherOutput = document.getElementById("weather")
 
-fetch('http://api.openweathermap.org/data/2.5/weather?q=düsseldorf&appid=cde5dbad7e9a5b07151e5dd79edf0e3c')
+// const weatherSearch = document.getElementById("weatherSearch")
+function test2() {
+fetch('http://api.openweathermap.org/data/2.5/weather?q=düsseldorf&units=metric&appid=cde5dbad7e9a5b07151e5dd79edf0e3c')
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(weather => {
+      console.log(weather);
+      weatherOutput = document.getElementById("weather")
+      weatherOutput.innerHTML += `
+        <img src="assets/img/nicolas-peyrol-l2VmsBG8nPE-unsplash.jpg" alt="">
+        <figcaption>Das Wetter für ${weather.name}</figcaption>
+        <h2>Es sind aktuell ${weather.main.temp} C°</h2>
+        <h3>Fühlt sich aber eher an wie ${weather.main.feels_like} C°.</h3>
+        <p>Die Luftfeuchtigkeit beträgt ${weather.main.humidity}%.</p>
+        <p>Die Windgeschwindigkeit beträgt ${weather.wind.speed}km/h.</p>
+        <form action="">
+            <input type="text" id="weatherInput" placeholder="Köln">
+            <input type="button" id="weatherSearch" value="Click" onclick="test()">
+        </form>
+    `
+  })
+}
+test2()
+
+function test() {
+    const weatherInput = document.getElementById("weatherInput")
+    const weatherInput2 = weatherInput.value
+    const weatherOutput = document.getElementById("weather")
+    console.log("hallo");
+    console.log(weatherInput2);
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${weatherInput2}&units=metric&appid=cde5dbad7e9a5b07151e5dd79edf0e3c`)
+  .then(response => response.json())
+  .then(weather => {
+      console.log(weather);
+      weatherOutput.innerHTML = `
+        <img src="assets/img/noaa-Y7GUOQ83OMg-unsplash.jpg" alt="">
+        <figcaption>Das Wetter für ${weather.name}</figcaption>
+        <h2>Es sind aktuell ${weather.main.temp} C°</h2>
+        <h3>Fühlt sich aber eher an wie ${weather.main.feels_like} C°.</h3>
+        <p>Die Luftfeuchtigkeit beträgt ${weather.main.humidity}%.</p>
+        <p>Die Windgeschwindigkeit beträgt ${weather.wind.speed}km/h.</p>
+        <form action="">
+            <input type="text" id="weatherInput" placeholder="Köln">
+            <input type="button" id="weatherSearch" value="Click" onclick="test()">
+        </form>
+    `
+  })
+}
 
 
-
-
-fetch('http://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=016fe436cfa242efa8d017d6af24688e')
+const newsSelect = document.getElementById("categories")
+fetch('http://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=016fe436cfa242efa8d017d6af24688e')
   .then(response => response.json())
   .then(json => {
         // console.log(json);
-        
         json.articles.forEach(element => {
             // console.log(element);
             if (element.urlToImage != undefined) {
@@ -78,6 +121,33 @@ fetch('http://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=0
             </figure>
             `
         }
-
         })
   } )
+
+
+  newsSelect.addEventListener("change", () => {
+        fetch(`http://newsapi.org/v2/top-headlines?country=de&category=${newsSelect.value}&apiKey=016fe436cfa242efa8d017d6af24688e`)
+        .then(response => response.json())
+        .then(json => {
+              // console.log(json);
+              newsGrid.innerHTML = `<figure id="weather"></figure>`
+              test2()
+              console.log(newsSelect.value);
+              json.articles.forEach(element => {
+                  // console.log(element);
+                  if (element.urlToImage != undefined) {
+                  newsGrid.innerHTML += `
+                  <figure>
+                      <img src=${element.urlToImage} alt="">
+                      <figcaption>${element.title}</figcaption>
+                      <p class="description">${element.description} <a href=${element.url}>Weiter lesen</a></p>
+                  </figure>
+                  `
+                  
+              }
+              
+              })
+              
+            } )
+        
+  })
