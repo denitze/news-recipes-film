@@ -1,7 +1,7 @@
 // Denise JS
 
 const foodResult = document.getElementById("food-result")
-let ingredient = document.getElementById("ingredient")
+const ingredient = document.getElementById("ingredient")
 
 // fetch('https://api.spoonacular.com/recipes/findByIngredients?apiKey=dc19a07e2b204a24857d8eff71c69d5b&ingredients=apples')
 //   .then(response => response.json())
@@ -11,11 +11,14 @@ let ingredient = document.getElementById("ingredient")
 //     })
 
     function findRecipe() {
-        ingredient = ingredient.value;
-        fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=df611f75b97141be917063ad735d8e66&number=6&ingredients=${ingredient}`)
+        console.log(ingredient);
+        let search = ingredient.value
+        // ingredient = ingredient.value;
+        console.log(ingredient);
+        fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=df611f75b97141be917063ad735d8e66&number=2&ingredients=${search}`)
         .then(response => response.json())
         .then(json => {
-        if(ingredient = json.length < 1) {
+        if(search = json.length < 1) {
             console.log("ERROR");
             foodResult.innerHTML +="Hierzu gibt es kein Rezept!"
         } else {
@@ -41,7 +44,7 @@ let ingredient = document.getElementById("ingredient")
         }
         
     })
-    ingredient = " "
+    ingredient.value = ""
 
     }
 
