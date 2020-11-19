@@ -105,6 +105,7 @@ function test() {
 
 const newsSelect = document.getElementById("categories")
 fetch('http://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=016fe436cfa242efa8d017d6af24688e')
+// fetch('http://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=e5282060965199600c1a50877b494763')
   .then(response => response.json())
   .then(json => {
         // console.log(json);
@@ -125,6 +126,8 @@ fetch('http://newsapi.org/v2/top-headlines?country=de&category=general&apiKey=01
 
   newsSelect.addEventListener("change", () => {
         fetch(`http://newsapi.org/v2/top-headlines?country=de&category=${newsSelect.value}&apiKey=016fe436cfa242efa8d017d6af24688e`)
+        //denise key
+        // fetch(`http://newsapi.org/v2/top-headlines?country=de&category=${newsSelect.value}&apiKey=e5282060965199600c1a50877b494763`)
         .then(response => response.json())
         .then(json => {
               // console.log(json);
