@@ -22,7 +22,7 @@ const ingredient = document.getElementById("ingredient")
         .then(json => {
         if(search = json.length < 1) {
             console.log("ERROR");
-            foodResult.innerHTML +="Hierzu gibt es kein Rezept!"
+            foodResult.innerHTML += `<p></p><p id="foodInnerHTML">Hierzu gibt es kein Rezept!</p>`
         } else {
 
         for (let i=0; i<json.length; i++) {
@@ -48,9 +48,7 @@ const ingredient = document.getElementById("ingredient")
         
     })
     ingredient.value = ""
-
     }
-
 
 // Finns JS
 const newsGrid = document.getElementById("newsGrid")

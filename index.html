@@ -8,33 +8,43 @@
 </head>
 <body>
     <nav>
-        <img src="assets/img/nrf_logo-02.svg" id="logo" alt="">
+        <a href="index.html">
+            <img src="assets/img/nrf_logo-02.svg" id="logo" alt="">
+        </a>
+        
         <ul>
-            <li><a href="index.html">News</a></li>
+            <li><a href="index.html" id="active">News</a></li>
             <li><a href="recipes.html">Rezepte</a></li>
             <li><a href="film.html">Filme</a></li>
         </ul>
     </nav>
     <header id="news-header">
+        <img src="assets/img/headerimg.png" alt="">
     </header>
     <main>
-        <select name="categories" id="categories">
-            <option value="General">General</option>
-            <option value="business">Business</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="health">Gesundheit</option>
-            <option value="science">Wissenschaft</option>
-          </select>
+        <h1 id="newsHeadline">Über welches Thema möchtest du mehr erfahren?</h1>
+        <section id="categoriesFlex">
+            <select name="categories" id="categories">
+                <option value="General">General</option>
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="health">Gesundheit</option>
+                <option value="science">Wissenschaft</option>
+            </select>
+        </section>
         <section id="newsGrid">
             <figure id="weather"></figure>
         </section>
     </main>
     <footer>
         <ul>
-            <li>
-                <a href="index.html">News</a>
-                <a href="recipes.html">Rezepte</a>
-                <a href="film.html">Filme</a>
+            <li> 
+                <h3>Quellen</h3>
+                <a href="https://openweathermap.org/" target="_blank">Wetter API</a>
+                <a href="https://newsapi.org/" target="_blank">New API</a>
+                <a href="https://spoonacular.com/" target="_blank">Rezepte API</a>
+                <a href="https://www.themoviedb.org/" target="_blank">Filme</a>
+                <a href="https://unsplash.com/">Bilder</a>
             </li>
         </ul>
     </footer>
