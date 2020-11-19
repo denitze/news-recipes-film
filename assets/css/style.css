@@ -1,113 +1,6 @@
-.galerie{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-   gap: 2%;
-    justify-content: space-between;
-    margin-top: 5%;
-} 
-#movie{
-     width: 85%;
-     height: 80vh;
-     border: 1px solid rgba(0, 0, 0, 0.082);
-     border-radius: 5%;
-     margin-left: 5%;
- }
-
-.galerie img{
-    width: 100%;
-    height: 50vh;
-    border-radius: 5% 5% 0 0;
-
-}
-.galerie ul{
-    list-style-type: none;
-}
-nav {
-    display: inline;
-}
-
-.galerie a{
-    text-decoration: none;
-    border: 1px solid rgba(0, 0, 0, 0.014);
-    background-color: rgba(145, 174, 228, 0.267);
-    padding: 3% ;
-    margin-left: 10%;
-    border-radius: 5%;
-    color: black;
-    margin-top: 5%;
-} 
-.name {
-    font-size: 25px;
-    font-weight: bold;
-    padding-bottom: 5%;
-}
-.datum{
-    font-size: 15px;
-    padding-bottom: 5%;
-    color: rgba(0, 0, 0, 0.383);
-}
-
-/* nav{
-    display: flex;
-    padding-top: 2%; 
-    justify-content: space-between;
-    align-items: center;
-    
-    width: 100%;
-    height: 10vh;
-    background-color: #020724e3;
-} */
- /* nav input[type=checkbox]{
-     display: none;
- }
-nav h1{
-    color: rgb(102, 167, 50);
-    margin: 0;
-    /* padding-left: 2%; 
-    font-size: 1.4rem;
-    font-family: 'Karla', sans-serif;
-}
-
-nav ul{
-     display: flex;
-     padding-right: 8%;
-     margin: 0;
-
-}
-
-nav li{
-    font-size: 1rem;
-    list-style-type:none ;
-    
-}
-nav li:not(:first-of-type){
-     padding-left: 30px; 
-}
-
-nav a{
-    color: #323A45;
-    text-decoration: none;
-    font-family: 'Karla', sans-serif;;
-    color: white;
-    
-   
-    
-}
-
-nav a:hover{
-    color: #848484;
-}
-
-nav h1:hover{
-    color: #848484;
-}
-nav img{
-    width: 50%;
-    height: 70%;
-    padding-left: 20%;
-} */
-/* Denise Part */
-
+/*
+NEWS - Finns style
+*/
 * {
     padding: 0;
     margin:0;
@@ -119,9 +12,107 @@ nav img{
     }
 
 
-body {
-    background: #D9DBDF;
+    body {
+        background: #D9DBDF;
+    }
+    
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
 }
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+nav ul li:nth-of-type(1) {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: .7;
+} 
+
+#news-header {
+    height: 70vh;
+    background: url(../img/headerimg.png) top / contain no-repeat;
+    animation: spinning 50s linear infinite;
+    margin: 0 0 2rem 0;
+}
+
+#newsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 6vmin;
+    
+}
+
+#logo {
+    border-radius: 0;
+    height: 2.5rem;
+}
+
+#logo:hover {
+    opacity: .8;
+}
+
+#newsGrid img {
+    max-height: 25vh;
+    object-fit: cover;
+    margin: 0 0 1rem 0;
+    border-radius: 2rem;
+}
+
+img:hover {
+    opacity: .8;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border-radius: 2rem;
+    box-shadow:  10px 10px 25px #b8babe, 
+             -10px -10px 25px #fafcff;
+
+}
+
+figcaption {
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+}
+
+figure p a {
+    font-weight: bold;
+}
+
+.description {
+    margin: 0 0 3rem 0;
+}
+
+@keyframes spinning {
+   0% {
+       transform: rotate(0);
+   }
+   100% {
+    transform: rotate(360deg);
+   }
+}
+
+
+/* Denise Part */
+
 
 
 #food-header {
@@ -172,8 +163,6 @@ body {
 }
 .recipe {
     width:80%;
-    /* border: 3px solid grey; */
-    /* background: rgb(230, 211, 211); */
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     display:flex;
     flex-direction: column;
@@ -217,100 +206,56 @@ body {
 .recipe a {
     color:black;
 }
-/*
-Finns style
-*/
 
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    height: 10vh;
-    align-items: center;
-}
 
-ul {
-    display: flex;
-    justify-content: space-evenly;
-    width: 20%;
-}
 
-ul li:nth-of-type(1) {
-    font-weight: bold;
-}
+/* Aos Part */
 
-a {
-    text-decoration: none;
-}
-
-a:hover{
-    opacity: .7;
-} 
-
-#news-header {
-    height: 70vh;
-    background: url(../img/headerimg.png) top / contain no-repeat;
-    animation: spinning 50s linear infinite;
-    margin: 0 0 2rem 0;
-}
-
-#newsGrid {
+.galerie{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 90%;
-    margin: 0 auto;
-    gap: 6vmin;
-    
-}
+    grid-template-columns: repeat(3,1fr);
+   gap: 2%;
+    justify-content: space-between;
+    margin-top: 5%;
+} 
+#movie{
+     width: 85%;
+     height: 80vh;
+     border: 1px solid rgba(0, 0, 0, 0.082);
+     border-radius: 5%;
+     margin-left: 5%;
+ }
 
-#logo {
-    border-radius: 0;
-    height: 2.5rem;
-}
-
-#logo:hover {
-    opacity: .8;
-}
-
-img {
-    max-height: 25vh;
-    object-fit: cover;
-    margin: 0 0 1rem 0;
-    border-radius: 2rem;
-}
-
-img:hover {
-    opacity: .8;
-}
-
-figure {
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    border-radius: 2rem;
-    box-shadow:  10px 10px 25px #b8babe, 
-             -10px -10px 25px #fafcff;
+.galerie img{
+    width: 100%;
+    height: 50vh;
+    border-radius: 5% 5% 0 0;
 
 }
+.galerie ul{
+    list-style-type: none;
+}
 
-figcaption {
-    margin: 0 0 1rem 0;
+
+.galerie a{
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.014);
+    background-color: rgba(145, 174, 228, 0.267);
+    padding: 3% ;
+    margin-left: 10%;
+    border-radius: 5%;
+    color: black;
+    margin-top: 5%;
+} 
+.name {
+    font-size: 25px;
     font-weight: bold;
+    padding-bottom: 5%;
+}
+.datum{
+    font-size: 15px;
+    padding-bottom: 5%;
+    color: rgba(0, 0, 0, 0.383);
 }
 
-figure p a {
-    font-weight: bold;
-}
-
-.description {
-    margin: 0 0 3rem 0;
-}
-
-@keyframes spinning {
-   0% {
-       transform: rotate(0);
-   }
-   100% {
-    transform: rotate(360deg);
-   }
-}
